@@ -1,16 +1,49 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav ul{
-    list-style: none;
-    display: flex; 
+body {
+  background: rgb(216, 230, 234);
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 13vh;
+  font-size: 1.25rem;
+}
+
+.list li {
+  display: inline-block;
+  padding: 0 2vw;
+}
+
+.list li {
+  display: inline-block;
+  padding: 0 2vw;
+}
+
+.logo {
+  height: 95%;
+  width: 7%;
+  padding: 10px 10px;
+  margin-left: 5px;
+}
+
+.list a {
+  text-decoration: none;
+}
+
+.loginBtn {
+  margin-right: 30px;
+  border: 2px solid blue;
+  padding: 10px 7px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgb(26, 215, 215), rgb(117, 205, 123));
+}
