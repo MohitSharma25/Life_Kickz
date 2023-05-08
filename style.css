@@ -5,22 +5,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
   background: rgb(216, 230, 234);
-
 }
 
-header {
+.navbar {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 13vh;
   font-size: 1.4rem;
-  background-color: black;
-  /* position: fixed;
-  width: 100%; */
+  background: linear-gradient(
+      45deg,
+      rgba(8, 34, 97, 0.8),
+      rgba(36, 7, 122, 0.8)
+    )
+    center center fixed;
+  background-repeat: no-repeat;
 }
 
 .list li {
@@ -28,33 +34,34 @@ header {
   padding: 0 2vw;
 }
 
-.list li a{
-  color: gray;
+.list li a {
+  color: rgb(145, 144, 144);
   position: relative;
 }
 
-li a::before,li a::after {
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 0;
-    background-color: #18f08b;
-    transition: 0.5s;
+li a::before,
+li a::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: #18f08b;
+  transition: 0.5s;
 }
-a::after{
-    left: 0;
-    bottom: -10px;
+a::after {
+  left: 0;
+  bottom: -10px;
 }
-a::before{
-    right: 0;
-    top:-10px;
+a::before {
+  right: 0;
+  top: -10px;
 }
-li a:hover{
-    color: white;
+li a:hover {
+  color: white;
 }
 a:hover::after,
-a:hover::before{
-    width: 100%;
+a:hover::before {
+  width: 100%;
 }
 
 .logo {
@@ -71,64 +78,62 @@ a:hover::before{
 
 .loginBtn {
   margin-right: 30px;
-  border: 2px solid blue;
+  border: 2px solid transparent;
   font-size: 1.15rem;
   padding: 12px 12px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, rgb(26, 215, 215), rgb(117, 205, 123));
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgb(163, 174, 132), rgb(183, 160, 117));
   cursor: pointer;
 }
-.loginBtn:hover{
-    background: linear-gradient(135deg, rgb(1, 103, 103), rgb(41, 103, 45));
-    color: rgb(203, 249, 242);
-    transition: .5 ease-in;
+.loginBtn:hover {
+  transition: 0.25s ease-in;
+  background: linear-gradient(135deg, rgb(130, 203, 28),rgb(153, 164, 30));
+  color: rgb(243, 246, 246);
 }
-.logoText{
-    font-size: 25px;        
-    margin-left: 6.4vw;
-    color: white;
+.logoText {
+  font-size: 25px;
+  margin-left: 6.4vw;
+  color: white;
 }
-.container{
-    padding: 2rem;
-    overflow: hidden;
-  }
-  .sliderWrapper{
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-  }
-  .slider{
-    
-    display: flex;
-    aspect-ratio: 16/9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(1, 0%, 0%, 0.25);
-    
-  }
-  .slider img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-  }
-  .sliderNav{
-    display: flex;
-    column-gap: 1rem;
-    position: relative;
-    bottom: 1.25rem;
-    left: 100%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  .sliderNav a{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
+.container {
+  padding: 2rem;
+  overflow: hidden;
 }
-.sliderNav a:hover{
-    opacity: 1;
+.sliderWrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+.slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(1, 0%, 0%, 0.25);
+}
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.sliderNav {
+  display: flex;
+  column-gap: 1rem;
+  position: relative;
+  bottom: 1.25rem;
+  left: 100%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.sliderNav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.sliderNav a:hover {
+  opacity: 1;
 }
