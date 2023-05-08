@@ -83,11 +83,11 @@ a:hover::before {
   padding: 12px 12px;
   border-radius: 12px;
   background: linear-gradient(135deg, rgb(163, 174, 132), rgb(183, 160, 117));
-  cursor: pointer;
+  cursor:pointer;
 }
 .loginBtn:hover {
   transition: 0.25s ease-in;
-  background: linear-gradient(135deg, rgb(130, 203, 28),rgb(153, 164, 30));
+  background: linear-gradient(135deg, rgb(130, 203, 28), rgb(153, 164, 30));
   color: rgb(243, 246, 246);
 }
 .logoText {
@@ -98,6 +98,8 @@ a:hover::before {
 .container {
   padding: 2rem;
   overflow: hidden;
+  cursor: grab;
+  /* overflow-x: hidden; */
 }
 .sliderWrapper {
   position: relative;
@@ -105,9 +107,11 @@ a:hover::before {
   margin: 0 auto;
 }
 .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   aspect-ratio: 16/9;
-  overflow-x: auto;
+  overflow: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(1, 0%, 0%, 0.25);
